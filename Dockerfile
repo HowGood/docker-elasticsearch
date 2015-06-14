@@ -8,7 +8,7 @@ ENV ES_VERSION 1.3.2
 RUN mkdir /usr/share/elasticsearch && \
     cd /usr/share/elasticsearch && \
     curl -SL "https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-$ES_VERSION.tar.gz" |
-      | tar zx --strip-components=1
+      tar zx --strip-components=1
 
 VOLUME ["/var/log/elasticsearch", "/var/lib/elasticsearch"]
 
