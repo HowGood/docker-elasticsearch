@@ -1,0 +1,25 @@
+bootstrap.mlockall: true
+
+plugin.mandatory: "cloud-aws"
+
+cluster.name: ${ES_CLUSTER_NAME}
+
+network:
+  publish_host: _ec2:privateIp_
+
+repositories:
+  s3:
+    bucket: ${ES_S3_BUCKET_NAME}
+    region: ${ES_S3_BUCKET_REGION}
+    compress: true
+    server_side_encryption: true
+
+discovery:
+  type: "ec2"
+  ec2:
+    host_type: "private_ip"
+    ping_timeout: "30s"
+  zen:
+    ping:
+      multicast:
+        enabled: false
