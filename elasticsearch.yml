@@ -13,12 +13,7 @@ gateway:
 path:
   data: /usr/share/elasticsearch/data
 
-repositories:
-  s3:
-    bucket: ${ES_S3_BUCKET_NAME}
-    region: ${ES_S3_BUCKET_REGION}
-    compress: true
-    server_side_encryption: true
+cloud.node.auto_attributes: true
 
 discovery:
   type: "ec2"
