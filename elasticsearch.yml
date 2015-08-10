@@ -12,6 +12,7 @@ gateway:
 
 path:
   data: /usr/share/elasticsearch/data
+  logs: /var/log/elasticsearch
 
 cloud.node.auto_attributes: true
 
